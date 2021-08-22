@@ -4,7 +4,6 @@ import RouteIcon from "./images/route.svg";
 import "./App.css";
 
 function App() {
-  console.log(CalendarIcon);
   return (
     <div className="App">
       <h1 className="title">Поиск дешевых авиабилетов</h1>
