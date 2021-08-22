@@ -1,42 +1,110 @@
-.App {
-  text-align: center;
+body {
+  background-color: #0c73fe;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  font-family: -apple-system, system-ui, Inter, Roboto, Helvetica, Arial,
+    sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-form {
   display: flex;
   flex-direction: column;
+  padding: 20px;
+}
+
+.title {
+  color: white;
+  font-size: 34px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.origin,
+.destination,
+.departure,
+.return,
+.passengers {
+  border: none;
+  height: 60px;
+  padding-left: 15px;
+  font-size: 15px;
+  margin-bottom: 2px;
+  background-color: white;
+  font-weight: 500;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 4px 8px 0px;
+}
+
+.origin {
+  border-radius: 10px 10px 0 0;
+}
+
+.date {
+  display: flex;
+  gap: 2px;
+}
+
+.date-input {
+  flex: 1;
+}
+
+.passengers {
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.passenger-amount,
+.cabin-class {
+  margin: 0px;
+}
+
+.search-form-input::placeholder {
+  color: #b4c1c8;
+}
+
+.cabin-class {
+  color: #b4c1c8;
+}
+
+.find-tickets {
+  border-radius: 10px;
+  background-color: #ff6f32;
+  height: 60px;
+  border: none;
+  color: white;
+  font-size: 17px;
+  font-weight: 800;
+  margin-top: 8px;
+}
+
+.compose-route {
+  background: none;
+  color: white;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 8px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.search-form-date {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.calendar {
+  position: absolute;
+  right: 10px;
 }
 
-button {
-  font-size: calc(10px + 2vmin);
+.route {
+  margin-right: 4px;
 }
