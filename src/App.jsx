@@ -6,6 +6,26 @@ import "./App.css";
 function App() {
   const [origin, setOrigin] = useState("Москва");
 
+  async function onChange(event) {
+    const { value } = event.target;
+    setOrigin(value);
+    const sort = "name";
+    const activeOnly = "true";
+    const locale = "ru-RU";
+    const limit = 1;
+    const term = value;
+    const apikey = import.meta.env.VITE_API_KEY;
+
+    const url = `https://tequila-api.kiwi.com/locations/query?sort=${sort}&term=${term}`;
+
+    const response = await fetch(url, {
+      headers: { apikey },
+    });
+
+    const data = await response.json();
+    console.log(data);
+  }
+
   return (
     <div className="App">
       <h1 className="title">Поиск дешевых авиабилетов</h1>
@@ -15,7 +35,7 @@ function App() {
           type="text"
           placeholder="Откуда"
           value={origin}
-          onChange={(event) => setOrigin(event.target.value)}
+          onChange={onChange}
         />
         <input
           className="search-form-input destination"
