@@ -28,11 +28,13 @@ function App() {
             />
             <img className="calendar" src={CalendarIcon} alt="" />
           </div>
-          <input
-            className="search-form-input date-input return"
-            type="text"
-            placeholder="Обратно"
-          />
+          <div className="search-form-date">
+            <input
+              className="search-form-input date-input return"
+              type="text"
+              placeholder="Обратно"
+            />
+          </div>
         </div>
         <div className="passengers" tabIndex="0">
           <p className="passenger-amount">1 пассажир</p>
