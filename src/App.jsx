@@ -4,6 +4,8 @@ import RouteIcon from "./images/route.svg";
 import "./App.css";
 
 function App() {
+  const [origin, setOrigin] = useState("Москва");
+
   return (
     <div className="App">
       <h1 className="title">Поиск дешевых авиабилетов</h1>
@@ -12,7 +14,8 @@ function App() {
           className="search-form-input origin"
           type="text"
           placeholder="Откуда"
-          value="Москва"
+          value={origin}
+          onChange={(event) => setOrigin(event.target.value)}
         />
         <input
           className="search-form-input destination"
